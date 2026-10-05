@@ -161,5 +161,40 @@ const GALLERY_DATA = [
       shutterSpeed: "1/160s",
       iso: "1250"
     }
+  },
+  {
+    id: 10,
+    title: "The Path Is Now Open",
+    category: "detalles",
+    categoryName: "Detalles & Cotidiano",
+    src: "images/path.jpg",
+    thumb: "images/path.jpg",
+    location: "Yamadaike Park",
+    exif: {
+      camera: "Nikon Z30",
+      lens: "NIKKOR Z DX",
+      focalLength: "16mm",
+      aperture: "f/3.5",
+      shutterSpeed: "1/160s",
+      iso: "100"
+    }
+  },
+  {
+    id: 11,
+    title: "The Journey Starts Here",
+    category: "detalles",
+    categoryName: "Detalles & Cotidiano",
+    src: "images/journey.jpg",
+    thumb: "images/journey.jpg",
+    location: "Yamadaike Park",
+    exif: {
+      camera: "Nikon Z30",
+      lens: "NIKKOR Z DX",
+      focalLength: "16mm",
+      aperture: "f/3.5",
+      shutterSpeed: "1/160s",
+      iso: "100"
+    }
   }
+  
 ];
