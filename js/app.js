@@ -16,7 +16,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const lightboxCounter = document.getElementById("lightboxCounter");
   const lightboxTitle = document.getElementById("lightboxTitle");
   const lightboxCategory = document.getElementById("lightboxCategory");
-  const lightboxStory = document.getElementById("lightboxStory");
   const lightboxLocation = document.getElementById("lightboxLocation");
   const lightboxCloseBtn = document.getElementById("lightboxCloseBtn");
   const lightboxPrevBtn = document.getElementById("lightboxPrevBtn");
@@ -157,8 +156,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Actualizar Textos
     lightboxCounter.textContent = `${currentIndex + 1} / ${visiblePhotos.length}`;
     lightboxTitle.textContent = photo.title;
-    lightboxCategory.textContent = photo.categoryName;
-    lightboxStory.textContent = photo.story || "Captura nocturna realizada con enfoque manual y medición puntual.";
+    if (lightboxCategory) lightboxCategory.textContent = photo.categoryName;
     if (lightboxLocation) lightboxLocation.textContent = photo.location;
 
     // Actualizar Ficha EXIF

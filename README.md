@@ -1,45 +1,44 @@
-# ✦ Nocturna · Portafolio de Fotografía Nocturna
+# ✦ Portafolio de Fotografía · Diario Visual
 
-Un portafolio web elegante, moderno y ultra ligero diseñado especialmente para fotografía nocturna, urbana y de larga exposición, con una estética **Midnight Noir & Neón**. 
+Un portafolio web elegante, moderno y ultra ligero diseñado para compartir capturas fotográficas (nocturnas, urbanas, paisajes y detalles cotidianos), con una estética oscura y acentos de luz estilo **Midnight & Neón**.
 
-Construido con **HTML5 semántico, CSS moderno y JavaScript Vanilla**, sin pasos de compilación ni dependencias pesadas. Listo para ser alojado de forma gratuita en **GitHub Pages**.
+Construido en una sola página con **HTML5 semántico, CSS moderno y JavaScript Vanilla**, sin pasos de compilación ni dependencias. Listo para ser alojado gratis en **GitHub Pages**.
 
 ---
 
-## 📸 Características del Diseño
+## 📸 Características
 
-- **Estética Midnight Noir**: Fondo oscuro profundo con acentos sutiles de neón (`cyan`, `ámbar` y `magenta`) para que los colores vivos de las fotos nocturnas resalten con máximo contraste.
-- **Halo de Luz Reactivo**: Efecto de iluminación sutil que acompaña el cursor del ratón, emulando una linterna en la oscuridad.
-- **Lightbox Cinematográfico**: Visor a pantalla completa usando el elemento nativo `<dialog>`, con navegación por flechas de teclado (`←` y `→`), tecla `Escape` y cierre táctil.
-- **Ficha Técnica EXIF**: Muestra parámetros reales de cada toma (Cámara, Objetivo, Apertura $f$, Velocidad de obturación, ISO y Distancia focal) y un breve relato del momento.
-- **Filtros por Categorías**: Filtra al instante entre *Luces de Neón*, *Larga Exposición*, *Calles & Penumbra* y *Retratos*.
-- **Sección Artística & No Comercial**: Enfoque personal por amor al arte, con citas, lista de equipo fotográfico y canales de contacto directo (Instagram, correo, etc.) para photowalks y colaboraciones.
-- **100% Responsivo**: Adaptado para teléfonos móviles, tablets y monitores de alta resolución.
+- **Diseño Oscuro con Halo de Luz**: Fondo negro profundo (`#07080a`) con acentos de luz donde las fotos brillan con alto contraste, además de un efecto sutil que acompaña el cursor.
+- **Enfoque de Aprendizaje**: Estructurado como un diario visual de alguien que está empezando y aprendiendo sobre composición, técnica y edición.
+- **Ficha Técnica EXIF en cada Foto**: Muestra los parámetros reales de disparo que te gusten (Cámara, Objetivo, Apertura $f$, Velocidad de obturación, Sensibilidad ISO y Distancia focal).
+- **Visor Lightbox Integrado (`<dialog>`)**: Visor a pantalla completa para apreciar las fotos en grande, con navegación por teclado (`←` y `→`) y tecla `Escape`.
+- **Filtros por Categorías**: Filtra al instante entre *Nocturna & Luces*, *Calles & Urbana*, *Paisajes & Lugares* y *Detalles & Cotidiano*.
+- **Conexión & Comunidad**: Enlaces directos a Instagram, Correo y perfiles de foto para conectar con otros aficionados, intercambiar consejos o planear salidas.
+- **Todo en una sola página**: Navegación fluida y limpia, sin tiempos de carga entre páginas.
+- **100% Responsivo**: Se adapta perfectamente a teléfonos móviles, tablets y ordenadores.
 
 ---
 
 ## 🚀 Cómo Probarlo en Tu Computadora
 
-1. Simplemente haz doble clic en el archivo `index.html` para abrirlo en tu navegador favorito (Chrome, Edge, Firefox, Safari).
-2. ¡Listo! Todo funciona sin instalar Node.js ni configurar servidores complejos.
+1. Simplemente haz doble clic en el archivo `index.html` para abrirlo en tu navegador favorito.
+2. ¡Listo! Todo funciona sin instalar Node.js ni configurar servidores.
 
 ---
 
 ## 🌐 Cómo Publicar tu Portafolio en GitHub Pages
 
-Subir tu portafolio a internet para que cualquier persona del mundo pueda verlo es completamente gratuito y toma 2 minutos:
+Subir tu portafolio a internet para compartirlo con amigos o la comunidad es gratuito y toma un par de minutos:
 
-### Paso 1: Inicializar Git y subir a GitHub
+### Paso 1: Subir tus cambios a tu repositorio de GitHub
 Abre tu terminal en la carpeta del proyecto y ejecuta:
 
 ```bash
-git init
 git add .
-git commit -m "feat: portafolio nocturno inicial"
+git commit -m "feat: actualizar diseño y fotos del portafolio"
 ```
 
-Luego crea un repositorio en [GitHub.com](https://github.com/new) (por ejemplo llamado `portfolio` o `tu-usuario.github.io`) y vincula tu repositorio local:
-
+Si aún no has vinculado tu repositorio remoto en GitHub:
 ```bash
 git branch -M main
 git remote add origin https://github.com/TU_USUARIO/TU_REPOSITORIO.git
@@ -47,52 +46,43 @@ git push -u origin main
 ```
 
 ### Paso 2: Activar GitHub Pages
-1. Entra a tu repositorio en GitHub en el navegador.
-2. Haz clic en la pestaña **Settings** (Ajustes).
-3. En la barra lateral izquierda, haz clic en **Pages**.
+1. Entra a tu repositorio en GitHub.
+2. Ve a la pestaña **Settings** (Ajustes).
+3. En el menú izquierdo, haz clic en **Pages**.
 4. En **Build and deployment > Source**, selecciona:
    - **Branch**: `main`
    - **Folder**: `/ (root)`
 5. Haz clic en **Save**.
-6. En un par de minutos, GitHub te dará la URL pública de tu web:  
+6. En breves minutos, tu portafolio estará visible en:  
    👉 `https://TU_USUARIO.github.io/TU_REPOSITORIO/`
 
 ---
 
-## 🎨 Cómo Personalizar Tu Portafolio
+## 🎨 Cómo Añadir Tus Propias Fotos
 
-### 1. Añadir tus propias fotos
-Abre el archivo `js/gallery-data.js`. Cada fotografía es un bloque como este:
+Abre el archivo `js/gallery-data.js`. Cada fotografía se define con un bloque sencillo como este:
 
 ```javascript
 {
   id: 1,
-  title: "Tu Título Aquí",
-  category: "neon", // Opciones: 'neon', 'long-exposure', 'urban', 'portrait'
-  categoryName: "Luces de Neón",
-  story: "Cuenta brevemente qué sentiste al tomar esta foto o el contexto.",
-  src: "images/mi-foto-alta-resolucion.jpg", // Tu foto grande
-  thumb: "images/mi-foto-miniatura.jpg",     // O la misma ruta
-  location: "Tu Ciudad o Lugar",
+  title: "Tu Título de la Foto",
+  category: "nocturna", // Opciones: 'nocturna', 'urbana', 'paisajes', 'detalles'
+  categoryName: "Nocturna & Luces",
+  src: "images/mi-foto.jpg",   // Ruta a tu foto en la carpeta images/
+  thumb: "images/mi-foto.jpg", // Puedes usar la misma ruta
+  location: "Lugar o Ciudad",
   exif: {
-    camera: "Tu Cámara (ej. Sony A7 III)",
-    lens: "Tu Lente (ej. 35mm f/1.4)",
+    camera: "Sony A7 III",
+    lens: "35mm f/1.4",
     focalLength: "35mm",
     aperture: "f/1.8",
     shutterSpeed: "1/60s",
     iso: "1600"
-  },
-  featured: true
+  }
 }
 ```
 
-> **Consejo para tus fotos**: Guarda tus imágenes en la carpeta `images/`. Te recomendamos optimizarlas previamente con herramientas como [Squoosh](https://squoosh.app) a un tamaño de entre 1600px y 2000px de ancho para que carguen al instante.
-
-### 2. Cambiar tu información personal y redes
-En `index.html`:
-- Busca `NOCTURNA` en el `<header>` si quieres poner tu nombre o seudónimo fotográfico.
-- En la sección `#sobre-mi`, personaliza tu historia y la lista de tu equipo en *En mi Mochila*.
-- En la sección `#contacto`, actualiza los enlaces con tu Instagram (`@tu_usuario`), tu correo electrónico real en el botón `mailto:` y tus perfiles fotográficos (Flickr, 500px, VSCO).
+> **Consejo**: Guarda tus fotos en la carpeta `images/`. Si las comprimes un poco con herramientas gratuitas como [Squoosh.app](https://squoosh.app) a un tamaño de 1600px o 2000px de ancho, tu web cargará al instante incluso en conexiones móviles.
 
 ---
 
@@ -100,18 +90,14 @@ En `index.html`:
 
 ```text
 Portfolio/
-├── .nojekyll           # Evita que GitHub Pages omita archivos estáticos
-├── index.html          # Estructura semántica principal
-├── README.md           # Guía e instrucciones de publicación
+├── .nojekyll           # Configuración para GitHub Pages
+├── index.html          # Página única con toda la estructura y secciones
+├── README.md           # Guía de publicación y personalización
 ├── css/
-│   └── style.css       # Estilos Darkroom Noir, Neón, Glassmorphism y Media Queries
+│   └── style.css       # Estilos visuales, modo oscuro, neón y layout responsivo
 ├── js/
-│   ├── gallery-data.js # Archivo donde agregas y editas tus fotos y datos EXIF
-│   └── app.js          # Lógica interactiva (filtros, lightbox, navegación de teclado)
+│   ├── gallery-data.js # Archivo donde agregas y editas tus fotos y parámetros EXIF
+│   └── app.js          # Control de filtros, visor modal y navegación
 └── images/             # Carpeta donde colocas tus archivos de fotografía
     └── README.md
 ```
-
----
-
-Hecho con pasión por la fotografía nocturna y la luz artificial. ¡Disfruta compartiendo tu visión de la noche con el mundo!
