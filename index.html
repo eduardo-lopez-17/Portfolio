@@ -22,6 +22,11 @@
   <!-- Halo de Luz Reactivo al Cursor -->
   <div class="ambient-glow" aria-hidden="true"></div>
 
+  <!-- Orbes de Luz de Fondo con Desenfoque (Blur) -->
+  <div class="blur-orb blur-orb-1" aria-hidden="true"></div>
+  <div class="blur-orb blur-orb-2" aria-hidden="true"></div>
+  <div class="blur-orb blur-orb-3" aria-hidden="true"></div>
+
   <!-- Cabecera de Navegación -->
   <header class="site-header">
     <div class="container nav-content">
@@ -295,10 +300,13 @@
     </div>
 
     <div class="lightbox-body">
-      <!-- Escenario de la Imagen -->
+      <!-- Escenario de la Imagen con Fondo y Halo Desenfoque -->
       <div class="lightbox-image-stage">
         <button class="lightbox-nav-btn lightbox-prev-btn" id="lightboxPrevBtn" aria-label="Fotografía anterior">❮</button>
-        <img src="" alt="" class="lightbox-img" id="lightboxImg">
+        <div class="lightbox-img-wrapper">
+          <div class="lightbox-img-glow" id="lightboxGlow"></div>
+          <img src="" alt="" class="lightbox-img" id="lightboxImg">
+        </div>
         <button class="lightbox-nav-btn lightbox-next-btn" id="lightboxNextBtn" aria-label="Fotografía siguiente">❯</button>
       </div>
 

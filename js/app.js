@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const filterButtons = document.querySelectorAll(".filter-btn");
   const lightbox = document.getElementById("lightboxDialog");
   const lightboxImg = document.getElementById("lightboxImg");
+  const lightboxGlow = document.getElementById("lightboxGlow");
   const lightboxCounter = document.getElementById("lightboxCounter");
   const lightboxTitle = document.getElementById("lightboxTitle");
   const lightboxCategory = document.getElementById("lightboxCategory");
@@ -149,6 +150,10 @@ document.addEventListener("DOMContentLoaded", () => {
       lightboxImg.alt = photo.title;
       lightboxImg.style.opacity = "1";
     };
+
+    if (lightboxGlow) {
+      lightboxGlow.style.backgroundImage = `url("${photo.src}")`;
+    }
 
     // Pre-cargar adyacentes para máxima velocidad
     preloadAdjacentPhotos();
