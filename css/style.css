@@ -641,8 +641,6 @@ body::after {
    ========================================================== */
 .series-section {
   padding: 5rem 0;
-  border-top: 1px solid var(--border-subtle);
-  background: linear-gradient(180deg, var(--bg-dark) 0%, var(--bg-surface) 100%);
 }
 
 .series-grid {
@@ -702,7 +700,6 @@ body::after {
    ========================================================== */
 .about-section {
   padding: 6rem 0;
-  border-top: 1px solid var(--border-subtle);
 }
 
 .about-grid {
@@ -794,8 +791,6 @@ body::after {
    ========================================================== */
 .contact-section {
   padding: 6rem 0;
-  border-top: 1px solid var(--border-subtle);
-  background: radial-gradient(circle at 50% 100%, rgba(0, 240, 255, 0.05), transparent 70%);
 }
 
 .contact-box {
@@ -1113,9 +1108,7 @@ body::after {
    PIE DE PÁGINA (FOOTER)
    ========================================================== */
 .site-footer {
-  border-top: 1px solid var(--border-subtle);
   padding: 3rem 0;
-  background: var(--bg-dark);
   text-align: center;
 }
 
@@ -1216,4 +1209,17 @@ body::after {
   
   .lightbox-prev-btn { left: 0.5rem; width: 46px; height: 46px; font-size: 1.2rem; }
   .lightbox-next-btn { right: 0.5rem; width: 46px; height: 46px; font-size: 1.2rem; }
+}
+
+/* Respeta la preferencia de movimiento reducido del sistema */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

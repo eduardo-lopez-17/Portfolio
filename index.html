@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
@@ -36,7 +36,7 @@
   <!-- Cabecera de Navegación -->
   <header class="site-header">
     <div class="container nav-content">
-      <a href="#inicio" class="logo-brand">
+      <a href="#home" class="logo-brand">
         <span class="brand-dot"></span>
         <span>ÁNGEL <span style="font-weight: 300; opacity: 0.7;">/ PHOTOGRAPHY</span></span>
       </a>
@@ -99,15 +99,15 @@
           <div class="hero-card-glow"></div>
           <div class="hero-featured-card">
             <div class="hero-img-wrap">
-              <img src="https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=1200&q=85"
-                alt="Featured photo with neon lights in the city" loading="eager">
+              <img src="images/portal.jpg"
+                alt="View through a wooden temple gate onto a street lined with autumn trees" loading="eager">
             </div>
             <div class="hero-card-info">
               <div>
-                <div class="hero-card-title">Reflejos de Neón</div>
-                <div class="hero-card-meta">35mm · f/1.8 · 1/60s · ISO 1600</div>
+                <div class="hero-card-title">Gateway to Autumn</div>
+                <div class="hero-card-meta">50mm · f/6.3 · 1/500s · ISO 100</div>
               </div>
-              <span class="hero-live-badge">Toma Favorita</span>
+              <span class="hero-live-badge">Favorite Shot</span>
             </div>
           </div>
         </div>
@@ -125,11 +125,11 @@
 
           <!-- Filtros de Categoría -->
           <ul class="filter-tabs" role="tablist">
-            <li><button class="filter-btn active" data-filter="all" role="tab">All</button></li>
-            <li><button class="filter-btn" data-filter="nocturna" role="tab">Nighttime & Lights</button></li>
-            <li><button class="filter-btn" data-filter="urbana" role="tab">Streets & Urban</button></li>
-            <li><button class="filter-btn" data-filter="paisajes" role="tab">Landscapes & Places</button></li>
-            <li><button class="filter-btn" data-filter="detalles" role="tab">Details & Everyday</button></li>
+            <li><button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All</button></li>
+            <li><button class="filter-btn" data-filter="nocturna" role="tab" aria-selected="false">Nighttime & Lights</button></li>
+            <li><button class="filter-btn" data-filter="urbana" role="tab" aria-selected="false">Streets & Urban</button></li>
+            <li><button class="filter-btn" data-filter="paisajes" role="tab" aria-selected="false">Landscapes & Places</button></li>
+            <li><button class="filter-btn" data-filter="detalles" role="tab" aria-selected="false">Details & Everyday</button></li>
           </ul>
         </div>
 
@@ -276,17 +276,6 @@
               </svg>
               <span>Send me an Email</span>
             </a>
-
-            <!-- 500px / Flickr / VSCO -->
-            <a href="https://500px.com" target="_blank" rel="noopener noreferrer" class="contact-card-btn">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="12" cy="12" r="10"></circle>
-                <circle cx="12" cy="12" r="4"></circle>
-                <line x1="4.93" y1="4.93" x2="9.17" y2="9.17"></line>
-                <line x1="14.83" y1="14.83" x2="19.07" y2="19.07"></line>
-              </svg>
-              <span>Flickr / 500px</span>
-            </a>
           </div>
         </div>
       </div>
@@ -301,7 +290,7 @@
         © <span id="currentYear">2026</span> Photography Portfolio · Exploring and learning day by day.
       </div>
       <div>
-        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="footer-gh">
+        <a href="https://github.com/eduardo-lopez-17/Portfolio" target="_blank" rel="noopener noreferrer" class="footer-gh">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path
               d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
@@ -316,21 +305,21 @@
   <!-- Lightbox Modal (<dialog>) -->
   <dialog class="lightbox-dialog" id="lightboxDialog" aria-labelledby="lightboxTitle">
     <div class="lightbox-header">
-      <div class="lightbox-counter" id="lightboxCounter">1 / 9</div>
-      <button class="lightbox-close-btn" id="lightboxCloseBtn" aria-label="Cerrar visor">✕</button>
+      <div class="lightbox-counter" id="lightboxCounter">1 / 1</div>
+      <button class="lightbox-close-btn" id="lightboxCloseBtn" aria-label="Close viewer">✕</button>
     </div>
 
     <div class="lightbox-body">
       <!-- Escenario de la Imagen con Fondo y Halo Desenfoque -->
       <div class="lightbox-image-stage">
         <button class="lightbox-nav-btn lightbox-prev-btn" id="lightboxPrevBtn"
-          aria-label="Fotografía anterior">❮</button>
+          aria-label="Previous photo">❮</button>
         <div class="lightbox-img-wrapper">
           <div class="lightbox-img-glow" id="lightboxGlow"></div>
           <img src="" alt="" class="lightbox-img" id="lightboxImg">
         </div>
         <button class="lightbox-nav-btn lightbox-next-btn" id="lightboxNextBtn"
-          aria-label="Fotografía siguiente">❯</button>
+          aria-label="Next photo">❯</button>
       </div>
 
       <!-- Barra Lateral con Datos de la Foto y EXIF -->

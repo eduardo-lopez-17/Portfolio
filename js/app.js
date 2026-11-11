@@ -43,8 +43,8 @@ document.addEventListener("DOMContentLoaded", () => {
     if (photos.length === 0) {
       galleryGrid.innerHTML = `
         <div style="grid-column: 1 / -1; text-align: center; padding: 4rem 1rem; color: var(--text-muted);">
-          <p style="font-size: 1.2rem; margin-bottom: 0.5rem;">No hay fotografías en esta categoría aún.</p>
-          <span style="font-size: 0.9rem; font-family: var(--font-mono);">Vuelve a seleccionar "Todas" para explorar más fotos.</span>
+          <p style="font-size: 1.2rem; margin-bottom: 0.5rem;">No photos in this category yet.</p>
+          <span style="font-size: 0.9rem; font-family: var(--font-mono);">Select "All" to explore more photos.</span>
         </div>
       `;
       return;
@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
       card.className = "photo-card";
       card.setAttribute("tabindex", "0");
       card.setAttribute("role", "button");
-      card.setAttribute("aria-label", `Ver fotografía: ${photo.title}`);
+      card.setAttribute("aria-label", `View photo: ${photo.title}`);
       
       card.innerHTML = `
         <div class="photo-img-wrap">
@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <line x1="11" y1="8" x2="11" y2="14"></line>
                 <line x1="8" y1="11" x2="14" y2="11"></line>
               </svg>
-              Ver en Detalle
+              View Details
             </span>
           </div>
         </div>
@@ -101,8 +101,12 @@ document.addEventListener("DOMContentLoaded", () => {
   // 2. Filtrado de Categorías
   filterButtons.forEach(btn => {
     btn.addEventListener("click", () => {
-      filterButtons.forEach(b => b.classList.remove("active"));
+      filterButtons.forEach(b => {
+        b.classList.remove("active");
+        b.setAttribute("aria-selected", "false");
+      });
       btn.classList.add("active");
+      btn.setAttribute("aria-selected", "true");
 
       currentFilter = btn.dataset.filter;
       if (currentFilter === "all") {

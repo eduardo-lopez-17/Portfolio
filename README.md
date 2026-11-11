@@ -12,7 +12,7 @@ Construido en una sola página con **HTML5 semántico, CSS moderno y JavaScript 
 - **Enfoque de Aprendizaje**: Estructurado como un diario visual de alguien que está empezando y aprendiendo sobre composición, técnica y edición.
 - **Ficha Técnica EXIF en cada Foto**: Muestra los parámetros reales de disparo que te gusten (Cámara, Objetivo, Apertura $f$, Velocidad de obturación, Sensibilidad ISO y Distancia focal).
 - **Visor Lightbox Integrado (`<dialog>`)**: Visor a pantalla completa para apreciar las fotos en grande, con navegación por teclado (`←` y `→`) y tecla `Escape`.
-- **Filtros por Categorías**: Filtra al instante entre *Nocturna & Luces*, *Calles & Urbana*, *Paisajes & Lugares* y *Detalles & Cotidiano*.
+- **Filtros por Categorías**: Filtra al instante entre *Nighttime & Lights*, *Streets & Urban*, *Landscapes & Places* y *Details & Everyday*.
 - **Conexión & Comunidad**: Enlaces directos a Instagram, Correo y perfiles de foto para conectar con otros aficionados, intercambiar consejos o planear salidas.
 - **Todo en una sola página**: Navegación fluida y limpia, sin tiempos de carga entre páginas.
 - **100% Responsivo**: Se adapta perfectamente a teléfonos móviles, tablets y ordenadores.
@@ -40,9 +40,8 @@ git commit -m "feat: actualizar diseño y fotos del portafolio"
 
 Si aún no has vinculado tu repositorio remoto en GitHub:
 ```bash
-git branch -M main
 git remote add origin https://github.com/TU_USUARIO/TU_REPOSITORIO.git
-git push -u origin main
+git push -u origin master
 ```
 
 ### Paso 2: Activar GitHub Pages
@@ -50,7 +49,7 @@ git push -u origin main
 2. Ve a la pestaña **Settings** (Ajustes).
 3. En el menú izquierdo, haz clic en **Pages**.
 4. En **Build and deployment > Source**, selecciona:
-   - **Branch**: `main`
+   - **Branch**: `master`
    - **Folder**: `/ (root)`
 5. Haz clic en **Save**.
 6. En breves minutos, tu portafolio estará visible en:  
@@ -67,13 +66,13 @@ Abre el archivo `js/gallery-data.js`. Cada fotografía se define con un bloque s
   id: 1,
   title: "Tu Título de la Foto",
   category: "nocturna", // Opciones: 'nocturna', 'urbana', 'paisajes', 'detalles'
-  categoryName: "Nocturna & Luces",
-  src: "images/mi-foto.jpg",   // Ruta a tu foto en la carpeta images/
+  categoryName: "Nighttime & Lights", // Nombre visible en inglés, igual que el filtro
+  src: "images/mi-foto.jpg",   // Ruta a tu foto en la carpeta images/ (nombre en minúsculas)
   thumb: "images/mi-foto.jpg", // Puedes usar la misma ruta
   location: "Lugar o Ciudad",
   exif: {
-    camera: "Sony A7 III",
-    lens: "35mm f/1.4",
+    camera: "Nikon Z30",
+    lens: "NIKKOR Z DX",
     focalLength: "35mm",
     aperture: "f/1.8",
     shutterSpeed: "1/60s",
@@ -99,5 +98,9 @@ Portfolio/
 │   ├── gallery-data.js # Archivo donde agregas y editas tus fotos y parámetros EXIF
 │   └── app.js          # Control de filtros, visor modal y navegación
 └── images/             # Carpeta donde colocas tus archivos de fotografía
-    └── README.md
+    ├── README.md
+    ├── path.jpg
+    ├── journey.jpg
+    ├── jail.jpg
+    └── portal.jpg
 ```
